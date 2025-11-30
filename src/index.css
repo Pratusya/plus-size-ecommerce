@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* Custom Fonts */
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  
+  /* Custom Colors */
+  --color-deep-teal: #0D7377;
+  --color-warm-coral: #FF6B6B;
+  --color-soft-cream: #FFF8F0;
+  --color-rich-navy: #1A2332;
+  --color-soft-gray: #E8E8E8;
+  --color-warm-gold: #D4AF37;
+  --color-success-green: #4CAF50;
+  --color-charcoal: #2D2D2D;
+  --color-light-gray: #F5F5F5;
+  --color-medium-gray: #757575;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-inter);
+  background-color: #ffffff;
+  color: var(--color-charcoal);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+}
+
+/* Focus Indicators for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-warm-coral);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-medium-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-deep-teal);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-slideOut {
+  animation: slideOut 0.3s ease-out;
+}
+
+.animate-pulse-badge {
+  animation: pulse 0.3s ease-out;
+}
+
+/* Page Transitions */
+.page-transition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Product Card Hover Effects */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Button Hover Effects */
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}
+
+.btn-cart {
+  transition: all 0.3s ease;
+}
+
+.btn-cart:hover {
+  transform: scale(1.05);
+}
