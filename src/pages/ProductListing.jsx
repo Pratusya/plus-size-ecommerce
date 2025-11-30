@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { products, getProductsByCategory, getSaleProducts, getNewArrivals } from '../data/products';
 import ProductGrid from '../components/product/ProductGrid';
