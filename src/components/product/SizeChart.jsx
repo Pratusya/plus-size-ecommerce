@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import Modal from '../common/Modal';
 
 const SizeChart = ({ isOpen, onClose, category = 'women' }) => {

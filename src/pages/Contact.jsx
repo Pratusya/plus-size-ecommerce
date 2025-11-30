@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import FadeIn from '../components/animations/FadeIn';
 import Button from '../components/common/Button';

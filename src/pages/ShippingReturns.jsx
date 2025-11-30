@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import FadeIn from '../components/animations/FadeIn';
 
 const ShippingReturns = () => {
